@@ -11,3 +11,17 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+# Add env.sh
+source ~/Projects/config/env.sh
+
+# Start rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Add homebrew to the completion path
+export PATH="/usr/local/bin:$PATH"
+
+export GOPATH=$HOME/Projects/Go # don't forget to change your path correctly!
+export GOROOT="/usr/local/opt/go/libexec"
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$GOROOT/bin"
